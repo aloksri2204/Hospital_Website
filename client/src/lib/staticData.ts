@@ -118,34 +118,35 @@ export const staticBlogPosts = [
 export const staticAppointments = [
   {
     id: 1,
-    patientName: "John Smith",
-    doctorId: 1,
-    date: new Date("2024-02-15"),
-    time: "09:00",
-    department: "general-medicine",
-    reason: "Annual checkup",
-    status: "confirmed",
+    fullName: "John Smith",
+    email: "john.smith@email.com",
     phone: "+1-555-1234",
-    email: "john.smith@email.com"
+    department: "pediatrics",
+    doctorId: 1,
+    preferredDate: "2024-02-15",
+    message: "Annual checkup for my child",
+    status: "confirmed",
+    createdAt: new Date("2024-02-10")
   },
   {
     id: 2,
-    patientName: "Mary Johnson",
-    doctorId: 2,
-    date: new Date("2024-02-16"),
-    time: "14:30",
-    department: "cardiology",
-    reason: "Follow-up consultation",
-    status: "pending",
+    fullName: "Mary Johnson",
+    email: "mary.johnson@email.com",
     phone: "+1-555-5678",
-    email: "mary.johnson@email.com"
+    department: "gynecology",
+    doctorId: 2,
+    preferredDate: "2024-02-16",
+    message: "Follow-up consultation",
+    status: "pending",
+    createdAt: new Date("2024-02-11")
   }
 ];
 
 export const staticContactMessages = [
   {
     id: 1,
-    name: "Alice Brown",
+    firstName: "Alice",
+    lastName: "Brown",
     email: "alice.brown@email.com",
     phone: "+1-555-9876",
     subject: "Insurance inquiry",

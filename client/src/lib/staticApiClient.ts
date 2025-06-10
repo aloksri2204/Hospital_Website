@@ -2,6 +2,12 @@
 import { staticDoctors, staticBlogPosts, staticAppointments, staticContactMessages } from './staticData';
 import type { Doctor, BlogPost, Appointment, ContactMessage, InsertAppointment, InsertContactMessage } from '@shared/schema';
 
+// Copy arrays to avoid mutations
+let doctorsData = [...staticDoctors];
+let blogData = [...staticBlogPosts]; 
+let appointmentsData = [...staticAppointments];
+let contactData = [...staticContactMessages];
+
 // Simulate API delay
 const delay = (ms: number = 100) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -9,66 +15,70 @@ export const staticApiClient = {
   // Doctors
   async getDoctors(): Promise<Doctor[]> {
     await delay();
-    return staticDoctors;
+    return doctorsData;
   },
 
   async getDoctorsByDepartment(department: string): Promise<Doctor[]> {
     await delay();
-    return staticDoctors.filter(doctor => doctor.department === department);
+    return doctorsData.filter(doctor => doctor.department === department);
   },
 
   async getDoctor(id: number): Promise<Doctor | null> {
     await delay();
-    return staticDoctors.find(doctor => doctor.id === id) || null;
+    return doctorsData.find(doctor => doctor.id === id) || null;
   },
 
   // Blog Posts
   async getBlogPosts(): Promise<BlogPost[]> {
     await delay();
-    return staticBlogPosts.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+    return blogData.sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
   },
 
   async getBlogPost(id: number): Promise<BlogPost | null> {
     await delay();
-    return staticBlogPosts.find(post => post.id === id) || null;
+    return blogData.find(post => post.id === id) || null;
   },
 
   async getBlogPostsByCategory(category: string): Promise<BlogPost[]> {
     await delay();
-    return staticBlogPosts.filter(post => post.category === category);
+    return blogData.filter(post => post.category === category);
   },
 
   // Appointments
   async getAppointments(): Promise<Appointment[]> {
     await delay();
-    return staticAppointments;
+    return appointmentsData;
   },
 
-  async createAppointment(appointment: InsertAppointment): Promise<Appointment> {
+  async createAppointment(appointment: InsertAppointment): Promise<any> {
     await delay();
-    const newAppointment: Appointment = {
-      id: staticAppointments.length + 1,
+    const newAppointment = {
+      id: appointmentsData.length + 1,
       ...appointment,
-      status: 'pending'
+      doctorId: appointment.doctorId || null,
+      message: appointment.message || null,
+      status: 'pending',
+      createdAt: new Date()
     };
-    staticAppointments.push(newAppointment);
+    appointmentsData.push(newAppointment as any);
     return newAppointment;
   },
 
   // Contact Messages
   async getContactMessages(): Promise<ContactMessage[]> {
     await delay();
-    return staticContactMessages;
+    return contactData;
   },
 
-  async createContactMessage(message: InsertContactMessage): Promise<ContactMessage> {
+  async createContactMessage(message: InsertContactMessage): Promise<any> {
     await delay();
-    const newMessage: ContactMessage = {
-      id: staticContactMessages.length + 1,
+    const newMessage = {
+      id: contactData.length + 1,
       ...message,
+      phone: message.phone || null,
       createdAt: new Date()
     };
-    staticContactMessages.push(newMessage);
+    contactData.push(newMessage as any);
     return newMessage;
   }
 };

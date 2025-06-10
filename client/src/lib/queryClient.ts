@@ -44,20 +44,20 @@ export const getQueryFn: <T>(options: {
       const url = queryKey[0] as string;
       
       if (url === '/api/doctors') {
-        return staticApiClient.getDoctors() as Promise<T>;
+        return staticApiClient.getDoctors() as any;
       } else if (url === '/api/blog') {
-        return staticApiClient.getBlogPosts() as Promise<T>;
+        return staticApiClient.getBlogPosts() as any;
       } else if (url === '/api/appointments') {
-        return staticApiClient.getAppointments() as Promise<T>;
+        return staticApiClient.getAppointments() as any;
       } else if (url.startsWith('/api/doctors/')) {
         const id = parseInt(url.split('/').pop() || '0');
-        return staticApiClient.getDoctor(id) as Promise<T>;
+        return staticApiClient.getDoctor(id) as any;
       } else if (url.startsWith('/api/blog/')) {
         const id = parseInt(url.split('/').pop() || '0');
-        return staticApiClient.getBlogPost(id) as Promise<T>;
+        return staticApiClient.getBlogPost(id) as any;
       }
       
-      return null as T;
+      return null as any;
     }
 
     const res = await fetch(queryKey[0] as string, {
