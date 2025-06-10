@@ -231,7 +231,11 @@ export class MemStorage implements IStorage {
 
   async createDoctor(insertDoctor: InsertDoctor): Promise<Doctor> {
     const id = this.currentDoctorId++;
-    const doctor: Doctor = { ...insertDoctor, id };
+    const doctor: Doctor = { 
+      ...insertDoctor, 
+      id,
+      rating: insertDoctor.rating ?? 5
+    };
     this.doctors.set(id, doctor);
     return doctor;
   }
@@ -251,7 +255,9 @@ export class MemStorage implements IStorage {
       ...insertAppointment, 
       id, 
       status: "pending",
-      createdAt: new Date()
+      createdAt: new Date(),
+      doctorId: insertAppointment.doctorId ?? null,
+      message: insertAppointment.message ?? null
     };
     this.appointments.set(id, appointment);
     return appointment;
@@ -287,7 +293,8 @@ export class MemStorage implements IStorage {
     const blogPost: BlogPost = { 
       ...insertBlogPost, 
       id, 
-      publishedAt: new Date()
+      publishedAt: new Date(),
+      authorId: insertBlogPost.authorId ?? null
     };
     this.blogPosts.set(id, blogPost);
     return blogPost;
@@ -303,7 +310,8 @@ export class MemStorage implements IStorage {
     const contactMessage: ContactMessage = { 
       ...insertContactMessage, 
       id, 
-      createdAt: new Date()
+      createdAt: new Date(),
+      phone: insertContactMessage.phone ?? null
     };
     this.contactMessages.set(id, contactMessage);
     return contactMessage;

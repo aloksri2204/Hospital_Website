@@ -213,18 +213,33 @@ export default function Contact() {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12 items-start">
-              {/* Map Placeholder */}
+              {/* Google Map */}
               <Card className="bg-white shadow-lg">
                 <CardContent className="p-0">
-                  <div className="h-64 lg:h-80 bg-gray-200 rounded-t-lg flex items-center justify-center">
-                    <div className="text-center care-gray">
-                      <i className="fas fa-map-marked-alt text-4xl mb-4"></i>
-                      <p className="text-lg font-medium">Interactive Map</p>
-                      <p className="text-sm">1234 Healthcare Drive, Medical City, MC 12345</p>
-                    </div>
+                  <div className="h-64 lg:h-80 rounded-t-lg overflow-hidden">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.4068715482785!2d-122.41941148461573!3d37.77492997975787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c5b5e3e5b%3A0x9b3f5b5b5e3e5b5b!2sSan%20Francisco%20General%20Hospital!5e0!3m2!1sen!2sus!4v1635789012345"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="CarePlus Hospital Location"
+                    ></iframe>
                   </div>
                   <div className="p-6">
-                    <h4 className="font-bold care-dark mb-3">Getting Here</h4>
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="font-bold care-dark">Getting Here</h4>
+                      <a 
+                        href="https://www.google.com/maps/dir//1234+Healthcare+Drive,+Medical+City,+MC+12345"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-care-blue hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all"
+                      >
+                        <i className="fas fa-directions mr-2"></i>Get Directions
+                      </a>
+                    </div>
                     <ul className="space-y-2 care-gray text-sm">
                       <li className="flex items-center">
                         <i className="fas fa-car mr-2 care-blue"></i>
