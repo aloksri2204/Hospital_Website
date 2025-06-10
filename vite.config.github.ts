@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/careplus-hospital/", // Change this to your repository name
+  base: "/Hospital_Website/", // Change this to your repository name
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
