@@ -4,11 +4,16 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: './',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
   resolve: {
     alias: {
@@ -18,8 +23,7 @@ export default defineConfig({
     },
   },
   root: './client',
-  server: {
-    port: 3000,
-    host: '0.0.0.0',
+  define: {
+    'import.meta.env.VITE_STATIC_BUILD': JSON.stringify('true'),
   },
 })
