@@ -1,0 +1,101 @@
+Create a professional, responsive hospital website for a healthcare facility specializing in Pediatric Services and Gynecology. The website should be clean, modern, and easy to navigate, designed with patient trust and care in mind.
+
+Include the following pages/sections:
+
+1. Homepage
+Welcome message or tagline (e.g., "Compassionate Care for Women and Children")
+
+Quick overview of Pediatric and Gynaecological services
+
+Hero image or video (family-friendly visuals)
+
+Call-to-action buttons (e.g., "Book an Appointment", "Meet Our Doctors")
+
+Testimonials or reviews from patients
+
+Emergency contact info
+
+2. About Us
+Hospital mission, vision, and values
+
+History and leadership
+
+Accreditation and quality assurance
+
+3. Departments / Services
+Pediatric Services:
+General Pediatrics
+
+Neonatal Care (NICU)
+
+Immunization & Vaccination
+
+Pediatric Surgery
+
+Growth & Development Monitoring
+
+Gynaecology Services:
+Prenatal & Antenatal Care
+
+Menstrual Disorders
+
+Fertility Consultation
+
+Gynecologic Surgeries
+
+Menopause Management
+
+4. Doctors / Team
+Doctor profiles with photo, qualifications, specialty, experience, and availability
+
+Filters by department (Pediatrics / Gynecology)
+
+5. Appointments
+Online appointment booking form
+
+Options to choose doctor, department, date, time
+
+Confirmation email/SMS setup
+
+6. Patient Information
+What to expect on first visit
+
+Insurance partners
+
+FAQs
+
+Patient rights and responsibilities
+
+7. Health Blog / Resources
+Articles related to child care, parenting, women’s health, pregnancy, etc.
+
+Doctor-authored posts
+
+8. Contact Us
+Address with map
+
+Phone numbers (emergency and appointments)
+
+Contact form
+
+Email
+
+9. Footer
+Social media links
+
+Newsletter signup
+
+Privacy Policy, Terms & Conditions
+
+Quick links to main sections
+
+10. Optional Features
+Live Chat / WhatsApp integration
+
+Patient portal login (for reports, prescriptions)
+
+Multilingual support (e.g., English + local language)
+
+Accessibility support (e.g., screen reader compatibility, font resizing)
+
+Design in a warm and welcoming color scheme (e.g., soft blues, whites, pastels). Use clear and readable fonts. The tone should be friendly, trustworthy, and professional.
