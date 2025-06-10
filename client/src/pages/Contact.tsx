@@ -216,7 +216,7 @@ export default function Contact() {
               {/* Google Map */}
               <Card className="bg-white shadow-lg">
                 <CardContent className="p-0">
-                  <div className="h-64 lg:h-80 rounded-t-lg overflow-hidden">
+                  <div className="h-48 sm:h-64 lg:h-80 rounded-t-lg overflow-hidden">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.4068715482785!2d-122.41941148461573!3d37.77492997975787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c5b5e3e5b%3A0x9b3f5b5b5e3e5b5b!2sSan%20Francisco%20General%20Hospital!5e0!3m2!1sen!2sus!4v1635789012345"
                       width="100%"

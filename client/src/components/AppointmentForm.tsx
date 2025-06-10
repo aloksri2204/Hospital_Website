@@ -80,9 +80,9 @@ export default function AppointmentForm() {
         </p>
       </CardHeader>
       
-      <CardContent className="p-8">
+      <CardContent className="p-4 sm:p-6 lg:p-8">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="grid md:grid-cols-2 gap-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="grid md:grid-cols-2 gap-4 sm:gap-6">
             <FormField
               control={form.control}
               name="fullName"
@@ -92,7 +92,7 @@ export default function AppointmentForm() {
                   <FormControl>
                     <Input 
                       placeholder="Enter your full name" 
-                      className="focus:border-care-blue"
+                      className="focus:border-care-blue touch-target"
                       {...field} 
                     />
                   </FormControl>
