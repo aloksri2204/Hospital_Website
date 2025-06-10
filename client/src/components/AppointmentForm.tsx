@@ -111,7 +111,7 @@ export default function AppointmentForm() {
                     <Input 
                       type="tel"
                       placeholder="Enter your phone number" 
-                      className="focus:border-care-blue"
+                      className="focus:border-care-blue touch-target"
                       {...field} 
                     />
                   </FormControl>
@@ -130,7 +130,7 @@ export default function AppointmentForm() {
                     <Input 
                       type="email"
                       placeholder="Enter your email" 
-                      className="focus:border-care-blue"
+                      className="focus:border-care-blue touch-target"
                       {...field} 
                     />
                   </FormControl>
@@ -175,7 +175,7 @@ export default function AppointmentForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="care-dark font-semibold">Preferred Doctor</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value?.toString()}>
+                  <Select onValueChange={field.onChange} value={field.value || ""}>
                     <FormControl>
                       <SelectTrigger className="focus:border-care-blue">
                         <SelectValue placeholder="Any Available Doctor" />
@@ -225,7 +225,7 @@ export default function AppointmentForm() {
                       <Textarea 
                         rows={4}
                         placeholder="Any additional information or concerns..."
-                        className="focus:border-care-blue"
+                        className="focus:border-care-blue touch-target"
                         {...field} 
                       />
                     </FormControl>
@@ -240,7 +240,7 @@ export default function AppointmentForm() {
                 type="submit" 
                 size="lg"
                 disabled={createAppointmentMutation.isPending}
-                className="bg-care-green hover:bg-green-600 text-white px-8 py-4 text-lg font-semibold transition-all transform hover:scale-105 shadow-lg"
+                className="bg-care-green hover:bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all transform hover:scale-105 shadow-lg touch-target w-full sm:w-auto"
               >
                 {createAppointmentMutation.isPending ? (
                   <>
