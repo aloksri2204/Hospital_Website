@@ -1,4 +1,5 @@
 import { QueryClient, QueryFunction } from "@tanstack/react-query";
+import { staticApiClient, isStaticBuild } from "./staticApiClient";
 
 async function throwIfResNotOk(res: Response) {
   if (!res.ok) {
@@ -12,6 +13,15 @@ export async function apiRequest(
   url: string,
   data?: unknown | undefined,
 ): Promise<Response> {
+  // For static builds, simulate API responses
+  if (isStaticBuild()) {
+    const mockResponse = new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" }
+    });
+    return mockResponse;
+  }
+
   const res = await fetch(url, {
     method,
     headers: data ? { "Content-Type": "application/json" } : {},
@@ -29,6 +39,27 @@ export const getQueryFn: <T>(options: {
 }) => QueryFunction<T> =
   ({ on401: unauthorizedBehavior }) =>
   async ({ queryKey }) => {
+    // For static builds, use static data
+    if (isStaticBuild()) {
+      const url = queryKey[0] as string;
+      
+      if (url === '/api/doctors') {
+        return staticApiClient.getDoctors() as Promise<T>;
+      } else if (url === '/api/blog') {
+        return staticApiClient.getBlogPosts() as Promise<T>;
+      } else if (url === '/api/appointments') {
+        return staticApiClient.getAppointments() as Promise<T>;
+      } else if (url.startsWith('/api/doctors/')) {
+        const id = parseInt(url.split('/').pop() || '0');
+        return staticApiClient.getDoctor(id) as Promise<T>;
+      } else if (url.startsWith('/api/blog/')) {
+        const id = parseInt(url.split('/').pop() || '0');
+        return staticApiClient.getBlogPost(id) as Promise<T>;
+      }
+      
+      return null as T;
+    }
+
     const res = await fetch(queryKey[0] as string, {
       credentials: "include",
     });

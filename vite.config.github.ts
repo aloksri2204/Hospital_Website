@@ -1,26 +1,25 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Hospital_Website/", // Change this to your repository name
+  base: '/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+  },
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+      '@': path.resolve(__dirname, './client/src'),
+      '@assets': path.resolve(__dirname, './client/src/assets'),
+      '@shared': path.resolve(__dirname, './shared'),
     },
   },
-  root: path.resolve(import.meta.dirname, "client"),
-  build: {
-    outDir: path.resolve(import.meta.dirname, "dist"),
-    emptyOutDir: true,
-    rollupOptions: {
-      input: path.resolve(import.meta.dirname, "client", "index.html"),
-    },
+  root: './client',
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
   },
-  define: {
-    "process.env.NODE_ENV": '"production"',
-  },
-});
+})
