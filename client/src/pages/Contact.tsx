@@ -232,7 +232,7 @@ export default function Contact() {
                     <div className="flex items-center justify-between mb-4">
                       <h4 className="font-bold care-dark">Getting Here</h4>
                       <a 
-                        href="https://www.google.com/maps/dir//CarePlus+Hospital,+Sigra,+Varanasi,+Uttar+Pradesh+221010,+India"
+                        href="https://www.google.com/maps/dir//Jain+Hospital,+Pandeypur,+Varanasi,+Uttar+Pradesh+221010,+India"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-care-blue hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all"
