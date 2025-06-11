@@ -7,12 +7,22 @@
     <meta name="description" content="Expert pediatric services and gynecological care at CarePlus Hospital. Comprehensive healthcare for women and children with compassionate, patient-first approach.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
-      // GitHub Pages SPA redirect handler
+      // GitHub Pages SPA redirect handler with hash routing
       (function() {
+        // Check if we're on GitHub Pages with a redirect stored
         var redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
+        
+        if (redirect && redirect !== location.href) {
+          // Extract the path and convert to hash
+          var redirectUrl = new URL(redirect);
+          var pathSegments = redirectUrl.pathname.split('/').filter(Boolean);
+          
+          if (pathSegments.length > 1) {
+            // Convert /repo/page to /#/page
+            var hashPath = pathSegments.slice(1).join('/');
+            history.replaceState(null, null, location.pathname + '#/' + hashPath);
+          }
         }
       })();
     </script>

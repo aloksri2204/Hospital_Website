@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CarePlus Hospital</title>
     <script>
-      // GitHub Pages SPA redirect
-      (function() {
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
+      // Simple redirect to index.html for GitHub Pages SPA
+      var currentPath = window.location.pathname;
+      var pathSegments = currentPath.split('/').filter(Boolean);
       
-      // Store the current location in session storage and redirect to index
-      var path = location.pathname.slice(1);
-      if (path) {
-        sessionStorage.redirect = location.href;
+      // For GitHub Pages repo hosting (username.github.io/repo-name)
+      if (pathSegments.length >= 1) {
+        var repoName = pathSegments[0];
+        var indexUrl = window.location.origin + '/' + repoName + '/';
+        
+        // Convert path to hash for client-side routing
+        if (pathSegments.length > 1) {
+          var hashPath = pathSegments.slice(1).join('/');
+          indexUrl += '#/' + hashPath;
+        }
+        
+        window.location.replace(indexUrl);
+      } else {
+        // Fallback for root domain
+        window.location.replace(window.location.origin + '/');
       }
-      location.replace(location.origin + location.pathname.split('/').slice(0, -1).join('/'));
     </script>
   </head>
   <body>
