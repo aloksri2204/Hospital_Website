@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <rect width="800" height="400" fill="#fef3c7"/>
+  <rect x="100" y="80" width="600" height="240" rx="12" fill="#ffffff" stroke="#fed7aa" stroke-width="2"/>
+  
+  <!-- Thermometer -->
+  <rect x="180" y="130" width="8" height="50" rx="4" fill="#ef4444"/>
+  <circle cx="184" cy="185" r="8" fill="#ef4444"/>
+  <rect x="182" y="135" width="4" height="40" fill="#ffffff"/>
+  
+  <!-- Stethoscope -->
+  <path d="M220 140 Q240 130 260 140 Q280 150 300 140" stroke="#3b82f6" stroke-width="4" fill="none"/>
+  <circle cx="220" cy="140" r="8" fill="#3b82f6" opacity="0.3"/>
+  <circle cx="300" cy="140" r="8" fill="#3b82f6" opacity="0.3"/>
+  <circle cx="310" cy="140" r="4" fill="#1f2937"/>
+  
+  <!-- Child figure -->
+  <circle cx="400" cy="130" r="18" fill="#fbbf24"/>
+  <rect x="385" y="155" width="30" height="35" rx="15" fill="#60a5fa"/>
+  <rect x="375" y="170" width="15" height="25" fill="#fbbf24"/>
+  <rect x="410" y="170" width="15" height="25" fill="#fbbf24"/>
+  <circle cx="390" cy="125" r="2" fill="#1f2937"/>
+  <circle cx="410" cy="125" r="2" fill="#1f2937"/>
+  <path d="M385 135 Q400 145 415 135" stroke="#1f2937" stroke-width="2" fill="none"/>
+  
+  <!-- Medicine bottle -->
+  <rect x="480" y="140" width="25" height="40" rx="3" fill="#10b981"/>
+  <rect x="485" y="135" width="15" height="8" rx="2" fill="#059669"/>
+  <circle cx="490" cy="155" r="2" fill="#ffffff"/>
+  <circle cx="497" cy="155" r="2" fill="#ffffff"/>
+  <rect x="485" y="165" width="15" height="2" fill="#ffffff"/>
+  
+  <!-- First aid cross -->
+  <rect x="550" y="140" width="40" height="40" rx="4" fill="#ef4444"/>
+  <rect x="565" y="150" width="10" height="20" fill="#ffffff"/>
+  <rect x="555" y="155" width="30" height="10" fill="#ffffff"/>
+  
+  <!-- Warning symbols -->
+  <polygon points="630,140 640,160 620,160" fill="#f59e0b"/>
+  <rect x="628" y="145" width="4" height="8" fill="#ffffff"/>
+  <circle cx="630" cy="156" r="1.5" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="400" y="250" text-anchor="middle" fill="#1f2937" font-size="24" font-weight="bold">Childhood Illnesses</text>
+  <text x="400" y="280" text-anchor="middle" fill="#6b7280" font-size="16">When to Seek Medical Help</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="650" cy="290" r="3" fill="#3b82f6" opacity="0.5"/>
+  <circle cx="680" cy="320" r="2" fill="#10b981" opacity="0.5"/>
+  <circle cx="120" cy="120" r="2" fill="#f59e0b" opacity="0.5"/>
+</svg>

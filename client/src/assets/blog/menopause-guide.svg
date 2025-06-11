@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <rect width="800" height="400" fill="#fdf2f8"/>
+  <rect x="100" y="80" width="600" height="240" rx="12" fill="#ffffff" stroke="#f3e8ff" stroke-width="2"/>
+  
+  <!-- Female symbol -->
+  <circle cx="200" cy="160" r="20" fill="#ec4899" opacity="0.7"/>
+  <rect x="195" y="180" width="10" height="20" fill="#ec4899"/>
+  <rect x="185" y="190" width="30" height="5" fill="#ec4899"/>
+  
+  <!-- Heart with pulse -->
+  <path d="M300 140 L310 150 L320 130 L330 170 L340 120 L350 160 L360 140" stroke="#ef4444" stroke-width="3" fill="none"/>
+  <path d="M280 155 C280 145, 290 140, 300 150 C310 140, 320 145, 320 155 C320 165, 300 180, 300 180 C300 180, 280 165, 280 155 Z" fill="#ef4444"/>
+  
+  <!-- Wellness icons -->
+  <circle cx="450" cy="140" r="25" fill="#10b981" opacity="0.2"/>
+  <path d="M435 140 L445 150 L465 130" stroke="#10b981" stroke-width="3" fill="none"/>
+  
+  <!-- Calendar with phases -->
+  <rect x="520" y="130" width="80" height="60" rx="6" fill="#ffffff" stroke="#d1d5db"/>
+  <rect x="525" y="125" width="6" height="10" fill="#6b7280"/>
+  <rect x="545" y="125" width="6" height="10" fill="#6b7280"/>
+  <rect x="565" y="125" width="6" height="10" fill="#6b7280"/>
+  <rect x="585" y="125" width="6" height="10" fill="#6b7280"/>
+  
+  <!-- Moon phases -->
+  <circle cx="540" cy="150" r="4" fill="#fbbf24"/>
+  <circle cx="560" cy="150" r="4" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="580" cy="150" r="4" fill="#e5e7eb"/>
+  <circle cx="540" cy="170" r="4" fill="#ec4899"/>
+  <circle cx="560" cy="170" r="4" fill="#10b981"/>
+  <circle cx="580" cy="170" r="4" fill="#3b82f6"/>
+  
+  <!-- Title -->
+  <text x="400" y="250" text-anchor="middle" fill="#1f2937" font-size="24" font-weight="bold">Menopause Guide</text>
+  <text x="400" y="280" text-anchor="middle" fill="#6b7280" font-size="16">Understanding Changes &amp; Wellness Support</text>
+  
+  <!-- Decorative flowers -->
+  <circle cx="650" cy="120" r="3" fill="#ec4899" opacity="0.5"/>
+  <circle cx="680" cy="160" r="2" fill="#10b981" opacity="0.5"/>
+  <circle cx="120" cy="280" r="2" fill="#fbbf24" opacity="0.5"/>
+</svg>

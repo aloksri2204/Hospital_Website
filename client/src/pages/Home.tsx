@@ -7,6 +7,9 @@ import BlogCard from "@/components/BlogCard";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import type { Doctor, BlogPost } from "@shared/schema";
+import sarahMImg from "@/assets/testimonials/sarah-m.svg";
+import emilyRImg from "@/assets/testimonials/emily-r.svg";
+import jamesTImg from "@/assets/testimonials/james-t.svg";
 
 export default function Home() {
   const { data: doctors = [] } = useQuery<Doctor[]>({
@@ -39,21 +42,21 @@ export default function Home() {
       review: "Dr. Johnson was incredible with my 3-year-old. She made him feel comfortable and explained everything to us clearly. The entire staff was so caring and professional.",
       name: "Sarah M.",
       title: "Mother of 2",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+      image: sarahMImg
     },
     {
       rating: 5,
       review: "The prenatal care I received from Dr. Rodriguez was exceptional. She guided me through my entire pregnancy with such expertise and compassion.",
       name: "Emily R.",
       title: "New Mother",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+      image: emilyRImg
     },
     {
       rating: 5,
       review: "Dr. Chen performed my daughter's surgery with such skill and care. The recovery was smooth and the follow-up care was outstanding.",
       name: "James T.",
       title: "Father",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+      image: jamesTImg
     }
   ];
 
