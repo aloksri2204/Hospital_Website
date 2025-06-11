@@ -33,8 +33,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
         
+      - name: List files before build
+        run: |
+          echo "Repository structure:"
+          ls -la
+          echo "Client directory:"
+          ls -la client/ || echo "Client directory not found"
+          
       - name: Build for GitHub Pages
-        run: npx vite build --config vite.config.github.ts
+        run: |
+          echo "Building with Vite..."
+          npx vite build --config vite.config.github.ts
+          echo "Build completed. Checking output:"
+          ls -la dist/ || echo "Dist directory not found"
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
