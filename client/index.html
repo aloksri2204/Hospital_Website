@@ -6,6 +6,16 @@
     <title>CarePlus Hospital - Compassionate Care for Women and Children</title>
     <meta name="description" content="Expert pediatric services and gynecological care at CarePlus Hospital. Comprehensive healthcare for women and children with compassionate, patient-first approach.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+      // GitHub Pages SPA redirect handler
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

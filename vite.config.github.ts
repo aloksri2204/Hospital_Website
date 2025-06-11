@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/Hospital_Website/',
   build: {
     outDir: path.resolve(__dirname, 'dist'),
     assetsDir: 'assets',

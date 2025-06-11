@@ -6,14 +6,14 @@ export default function Contact() {
     {
       icon: "fas fa-map-marker-alt",
       title: "Address",
-      details: ["1234 Healthcare Drive", "Medical City, MC 12345"]
+      details: ["CarePlus Hospital, Sigra", "Varanasi, Uttar Pradesh 221010, India"]
     },
     {
       icon: "fas fa-phone",
       title: "Phone Numbers",
       details: [
-        "Appointments: +1 (555) 123-4567",
-        "Emergency: +1 (555) 911-CARE"
+        "Appointments: +91 542 123-4567",
+        "Emergency: +91 542 911-CARE"
       ]
     },
     {
@@ -218,21 +218,21 @@ export default function Contact() {
                 <CardContent className="p-0">
                   <div className="h-48 sm:h-64 lg:h-80 rounded-t-lg overflow-hidden">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.4068715482785!2d-122.41941148461573!3d37.77492997975787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c5b5e3e5b%3A0x9b3f5b5b5e3e5b5b!2sSan%20Francisco%20General%20Hospital!5e0!3m2!1sen!2sus!4v1635789012345"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.5729076958797!2d82.9739144!3d25.31681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x67b1bf6e62d9d73e!2sSigra%2C%20Varanasi%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2sus!4v1635789012345"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="CarePlus Hospital Location"
+                      title="CarePlus Hospital Location - Varanasi"
                     ></iframe>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-4">
                       <h4 className="font-bold care-dark">Getting Here</h4>
                       <a 
-                        href="https://www.google.com/maps/dir//1234+Healthcare+Drive,+Medical+City,+MC+12345"
+                        href="https://www.google.com/maps/dir//CarePlus+Hospital,+Sigra,+Varanasi,+Uttar+Pradesh+221010,+India"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-care-blue hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all"
@@ -243,19 +243,19 @@ export default function Contact() {
                     <ul className="space-y-2 care-gray text-sm">
                       <li className="flex items-center">
                         <i className="fas fa-car mr-2 care-blue"></i>
-                        Free parking available in our main lot
+                        Free parking available in hospital premises
                       </li>
                       <li className="flex items-center">
                         <i className="fas fa-bus mr-2 care-blue"></i>
-                        Public transit: Bus lines 12, 34, and 56
+                        Auto-rickshaws and city buses available from Varanasi Junction
                       </li>
                       <li className="flex items-center">
                         <i className="fas fa-wheelchair mr-2 care-blue"></i>
-                        Fully accessible facilities and parking
+                        Fully accessible facilities with ramp access
                       </li>
                       <li className="flex items-center">
-                        <i className="fas fa-clock mr-2 care-blue"></i>
-                        Valet parking available during peak hours
+                        <i className="fas fa-taxi mr-2 care-blue"></i>
+                        Taxi and app-based cab services readily available
                       </li>
                     </ul>
                   </div>
@@ -274,16 +274,16 @@ export default function Contact() {
                   <CardContent>
                     <div className="space-y-4">
                       <div>
-                        <h5 className="font-semibold care-dark mb-2">From Downtown</h5>
-                        <p className="care-gray text-sm">Take Highway 101 North for 8 miles, exit at Medical Center Drive, turn right and continue for 2 miles.</p>
+                        <h5 className="font-semibold care-dark mb-2">From Varanasi Cantt Railway Station</h5>
+                        <p className="care-gray text-sm">Take Grand Trunk Road towards Sigra, turn right at Lanka intersection, continue for 2 km to reach the hospital.</p>
                       </div>
                       <div>
-                        <h5 className="font-semibold care-dark mb-2">From Airport</h5>
-                        <p className="care-gray text-sm">Take Airport Blvd to I-85 South, exit at Healthcare Way, turn left and follow signs to hospital.</p>
+                        <h5 className="font-semibold care-dark mb-2">From Lal Bahadur Shastri Airport</h5>
+                        <p className="care-gray text-sm">Take NH19 towards Varanasi city, turn left at DLW crossing, follow Sigra Road for 3 km to reach the hospital.</p>
                       </div>
                       <div>
-                        <h5 className="font-semibold care-dark mb-2">Public Transportation</h5>
-                        <p className="care-gray text-sm">Metro bus lines stop directly in front of the main entrance. Check schedules at metro.gov.</p>
+                        <h5 className="font-semibold care-dark mb-2">From Godowlia/Dashashwamedh Ghat</h5>
+                        <p className="care-gray text-sm">Take auto-rickshaw or city bus via Lanka-Sigra route. Hospital is located near BHU main gate area.</p>
                       </div>
                     </div>
                   </CardContent>
